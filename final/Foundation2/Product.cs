@@ -1,49 +1,35 @@
 public class Product
 {
   private string _name;
-  private int _productId;
-  private double _price;
+  private string _productId;
+  private float _price;
   private int _quant;
 
-  public void SetProdName(string name)
+  public Product(string name, string id, float price, int quant)
   {
     _name = name;
+    _productId = id;
+    _price = price;
+    _quant = quant;
   }
   public string GetProdName()
   {
     return _name;
   }
-  
-  public void SetProdId(int id)
-  {
-    _productId = id;
-  }
-  public int GetProdId()
+  public string GetProdId()
   {
     return _productId;
-  }
-  
-  public void SetProdPrice(double price)
-  {
-    _price = price;
   }
   public double GetProdPrice()
   {
     return _price;
   }
-
-  public void SetQuant(int quant)
-  {
-    _quant = quant;
-  }
   public int GetQuant()
   {
     return _quant;
   }
-
-  public void TotalAmt()
+  public float TotalAmt()
   {
-    double total = _quant * _price;
-    Console.WriteLine(total);
+    return _quant * _price;
   }
 }
